@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestTask</title>
+    <title></title>
     <link rel="stylesheet" href="./CSS/main.css">
 </head>
 <body>
     <script src="JS/polyndrom.js"></script>
-    <div class="test_for_palindrom_area">
-        <h1 class="title_area">Проверка выражения на палиндром:</h1>
-        <input type="text" id="text-input" />
-        <button onclick="checkPalindrome()">Проверить</button>
+    <div class="container">
+        <h1>Проверка выражения на палиндром:</h1>
+        <div class="input-group">
+            <input type="text" id="text-input" placeholder="Введите текст"/>
+            <button onclick="checkPalindrome()">Проверить</button>
+        </div>
         <p id="result"></p>
     </div>
 </body>
