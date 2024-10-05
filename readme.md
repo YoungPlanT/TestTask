@@ -138,7 +138,18 @@ for i in range(0, len(tests)):
 <p>Код метода на C#:</P>
 
 ```C#
+static void Main(string[] args)
+{
+    string strInput = Console.ReadLine();
+    if (IsPolindrom(strInput)) Console.WriteLine("Полиндром");
+    else Console.WriteLine("Не полиндром");
+}
 
+static bool IsPolindrom(string str)
+{
+    string temp = str.Replace(" ", "").ToLower();
+    return temp == new string(temp.ToCharArray().Reverse().ToArray());
+}
 ```
 
 <h2>4. Опыт в IT и GitHub</h2>
