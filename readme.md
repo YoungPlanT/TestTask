@@ -87,11 +87,63 @@ public class Cat : Animal
 
 <h2>2. Восстановление предыдущей версии кода в Git</h2>
 
+``` Git bash
+git log
+git checkout <commit_hash>
+git revert <commit_hash>
+git reset --hard <commit_hash>
+```
+
 <h2>3. Функция проверки палиндрома</h2>
+Реализована функция на нескольких языках программирования:
+
+1. JavaScript.
+<p>Работоспособность фуннкции можно проверить на веб-странице. Код метода:</p>
+
+```JavaScript
+function checkPalindrome() {
+    const textInput = document.getElementById('text-input').value;
+    const cleanedText = textInput.replace(/\s/g, '').toLowerCase();
+    const isPalindrome = cleanedText === cleanedText.split('').reverse().join('');
+  
+    const resultElement = document.getElementById('result');
+    if (isPalindrome) {
+      resultElement.textContent = `Текст "${textInput}" является палиндромом.`;
+    } else {
+      resultElement.textContent = `Текст "${textInput}" не является палиндромом.`;
+    }
+  }
+```
+
+2. Python.
+<p>Исполняемый файл находится в папке "3-d stage". Там же находится файл с тестовыми входными данными. Код исполняемого файла представлен ниже:</p>
+
+``` Python
+def readLinesFromFile(path: str):
+    with open(path, 'r') as file:
+        return [line.strip() for line in file.readlines()]
+    
+
+def isPolyndrom(text: str):
+    return text == text[::-1]
+
+
+tests = readLinesFromFile('./3-d stage/test.txt')
+for i in range(0, len(tests)):
+    test = tests[i]
+    print(f"{i}. {test} - {isPolyndrom(test)}")
+```
+
+3. C#
+<p>Код метода на C#:</P>
+
+```C#
+
+```
 
 <h2>4. Опыт в IT и GitHub</h2>
 [Сайт-проект от HTMLacademy] (https://youngplant.github.io/SpaceZ/)
-git sta
+
 > В качестве заключительного этапа обучения на платформе HTMLacademy необходимо было реализовать задание сайт по шаблону веб-сайта. Обучение на платформре было прдложено школой.
 
 [Creatives] (https://youngplant.github.io/SomeNew/)

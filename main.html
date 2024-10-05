@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./CSS/main.css">
 </head>
 <body>
+    <script src="JS/polyndrom.js"></script>
     <div class="test_for_palindrom_area">
         <h1 class="title_area">Проверка выражения на палиндром:</h1>
-        <textarea class="field_palindrom"></textarea>
-        <button class="run_test">Проверить</button>
-        <p class="result"></p>
+        <input type="text" id="text-input" />
+        <button onclick="checkPalindrome()">Проверить</button>
+        <p id="result"></p>
     </div>
 </body>
 </html>
